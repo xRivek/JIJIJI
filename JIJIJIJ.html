@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffcccb; /* Fondo rosa inicial */
+            transition: background-image 0.5s ease; /* Transición suave para el fondo */
+            color: white; /* Color del texto */
+            text-align: center; /* Centrar el texto */
+        }
+        #clickMe {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ffdde1; /* Rosa pastel claro para el botón */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #clickMe:hover {
+            background-color: #ffb3d9; /* Color al pasar el mouse */
+        }
+        #message {
+            font-size: 2em;
+            margin-top: 20px;
+            display: none;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Animación del texto */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+        }
+        img {
+            max-width: 300px;
+            margin-top: 20px;
+            display: none;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Animación de la imagen */
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7); /* Sombra de la imagen */
+        }
+    </style>
+</head>
+<body>
+    <button id="clickMe">Haz clic aquí</button>
+    <div id="message">TE AMO JIJIJIJIJI</div>
+    <img id="image" src="https://i.pinimg.com/originals/80/d3/00/80d30084d3a3360f9e4214cde599f1ae.gif" alt="Imagen de amor">
+
+    <script>
+        document.getElementById('clickMe').onclick = function() {
+            this.style.display = 'none'; // Ocultar el botón
+            const message = document.getElementById('message');
+            const image = document.getElementById('image');
+
+            // Mostrar el mensaje y la imagen con animación
+            message.style.display = 'block';
+            image.style.display = 'block';
+            document.body.style.backgroundImage = "url('https://i.pinimg.com/736x/fd/68/3d/fd683d9c26d43406187902c1f6d6ced4.jpg')"; // Cambiar el fondo
+            document.body.style.backgroundSize = "cover"; // Ajustar la imagen al tamaño de la página
+            document.body.style.backgroundPosition = "center"; // Centrar la imagen
+
+            // Animar el mensaje y la imagen
+            setTimeout(() => {
+                message.style.opacity = 1;
+                message.style.transform = 'translateY(0)';
+            }, 100); // Retardo para la animación
+
+            setTimeout(() => {
+                image.style.opacity = 1;
+                image.style.transform = 'translateY(0)';
+            }, 300); // Retardo para la animación
+        }
+    </script>
+</body>
+</html>
+
+
+
+
